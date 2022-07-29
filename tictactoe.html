@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+   
+<head>
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <script src="tic.js"></script>
+    <style type="text/css">
+
+                html
+                {
+                   margin-top: -1vh;
+                }
+                body
+                {
+                    background-image: url(background.jpg);
+                    margin-bottom: -1vh;
+                }
+                #heading
+                {
+                    font-weight: bold;
+                    font-size: 70px;
+                    font-style: normal;
+                    font-family: cursive;
+                    border: 2px dotted lightskyblue;
+                    width: 150px;
+                }
+                #T
+                {
+                    color: rgb(217, 63, 223);
+                }
+                #I
+                {
+                    color: rgb(143, 252, 143);
+                }
+                #game
+                {
+                    font-size: 35px;
+                    color: rgb(247, 7, 175);
+                    font-weight: bold;
+                    padding-left: 25%;
+                    font-style: italic;
+                    font-family:monospace;
+                    position: absolute;
+                    top: 20px;
+                }
+                #turn1
+                {
+                    font-size: 30px;
+                    color: mediumvioletred;
+                    font-weight: normal;
+                    padding-left: 30%;
+                    font-style: oblique;
+                    font-family: monospace;
+                    position: absolute;
+                    top:90px;
+                }
+                #and
+                {
+                    font-size: 30px;
+                    color: mediumvioletred;
+                    font-weight: normal;
+                    padding-left: 45%;
+                    font-style: oblique;
+                    font-family: monospace;
+                    position: absolute;
+                    top:157px;
+                }
+                #turn2
+                {
+                    font-size: 30px;
+                    color: mediumvioletred;
+                    font-weight: normal;
+                    padding-left: 33%;
+                    font-style: oblique;
+                    font-family: monospace;
+                    position: absolute;
+                    top:160px;
+                }
+                #reset
+                {
+                    font-size: 40px;
+                    font-weight: bold;
+                    color: rgb(228, 23, 183);
+                    background-color: rgb(186, 204, 228);
+                    font-style: oblique;
+                    font-family: monospace;
+                    position: absolute;
+                    top:600px;
+                    left: 670px;
+                }
+                #b1 
+                {
+                   width: 90px;
+                   height: 62px;
+                   border: 1px solid gray;
+                   border-radius: 6px;
+                   font-size: 30px;
+                   text-align: center;
+                   background-color: palevioletred;
+                   position: absolute;
+                   top:280px;
+                   left: 530px;
+                }
+                #b2
+                {
+                   width: 90px;
+                   height: 62px;
+                   border: 1px solid gray;
+                   border-radius: 6px;
+                   font-size: 30px;
+                   text-align: center;
+                   background-color: palevioletred;
+                   position: absolute;
+                   top: 280px;
+                   left: 680px;
+                }
+                #b3
+                {
+                   width: 90px;
+                   height: 62px;
+                   border: 1px solid gray;
+                   border-radius: 6px;
+                   font-size: 30px;
+                   text-align: center;
+                   background-color: palevioletred;
+                   position: absolute;
+                   top:280px;
+                   left: 830px;
+                }
+                #b4
+                {
+                   width: 90px;
+                   height: 62px;
+                   border: 1px solid gray;
+                   border-radius: 6px;
+                   font-size: 30px;
+                   text-align: center;
+                   background-color: palevioletred;
+                   position: absolute;
+                   top:380px;
+                   left: 530px;
+                }
+                #b5
+                {
+                   width: 90px;
+                   height: 62px;
+                   border: 1px solid gray;
+                   border-radius: 6px;
+                   font-size: 30px;
+                   text-align: center;
+                   background-color: palevioletred;
+                   position: absolute;
+                   top: 380px;
+                   left:680px;
+                }
+                #b6
+                {
+                   width: 90px;
+                   height: 62px;
+                   border: 1px solid gray;
+                   border-radius: 6px;
+                   font-size: 30px;
+                   text-align: center;
+                   background-color: palevioletred;
+                   position: absolute;
+                   top:380px;
+                   left: 830px;
+                }
+                #b7
+                {
+                   width: 90px;
+                   height: 62px;
+                   border: 1px solid gray;
+                   border-radius: 6px;
+                   font-size: 30px;
+                   text-align: center;
+                   background-color: palevioletred;
+                   position: absolute;
+                   top:480px;
+                   left: 530px;
+                }
+                #b8
+                {
+                   width: 90px;
+                   height: 62px;
+                   border: 1px solid gray;
+                   border-radius: 6px;
+                   font-size: 30px;
+                   text-align: center;
+                   background-color: palevioletred;
+                   position: absolute;
+                   top:480px;
+                   left: 680px;
+                }
+                #b9
+                {
+                   width: 90px;
+                   height: 62px;
+                   border: 1px solid gray;
+                   border-radius: 6px;
+                   font-size: 30px;
+                   text-align: center;
+                   background-color: palevioletred;
+                   position: absolute;
+                   top:480px;
+                   left: 830px;
+                }
+                #print
+                {
+                    font-weight: bold;
+                    font-size: 30px;
+                    font-style: normal;
+                    font-family: cursive;
+                    padding-left: 42%;
+                    position: absolute;
+                    top:650px;
+                }
+                #image
+                {
+                     image-resolution:initial;
+                     padding-left: 8%;
+                     -webkit-transform: rotate(60deg);
+                     -moz-transform: rotate(180deg);
+                     -ms-transform: rotate(48deg);
+                     -o-transform: rotate(47deg);
+                     transform: rotate(169deg);
+                }
+                #image1
+                {
+                     image-resolution:initial;
+                     padding-left: 5%;
+                     position: absolute;
+                     top:370px;
+                     -webkit-transform: rotate(60deg);
+                     -moz-transform: rotate(60deg);
+                     -ms-transform: rotate(60deg);
+                     -o-transform: rotate(60deg);
+                     transform: rotate(18deg);
+                }
+    </style>
+</head>
+   
+<body>
+    &nbsp;
+          <div id="heading"><span id="T">T</span><span id="I">I</span><span id="T">C</span>
+                            <span id="I">T</span><span id="T">A</span><span id="I">C</span>
+                            <span id="T">T</span><span id="I">O</span><span id="T">E</span></div>
+         <p id="game">Game starts by just Tapping on the box</p>
+         <p id="turn1">First Player starts as Player X</p>
+         <o id="and">And</o>
+         <p id="turn2">Second Player as Player 0</p>
+         &nbsp;
+         <p id="image"><img src="tic-tac.jpg" width="200px" height="200px"></p>
+         <p id="image1"><img src="tictoe.jpg" width="200px" height="200px"></p>
+        <input type="text" id="b1" onclick="myfunc_1(); myfunc();" readonly> 
+        <input type="text" id="b2" onclick="myfunc_2(); myfunc();" readonly> 
+        <input type="text" id="b3" onclick="myfunc_3(); myfunc();" readonly>
+        <br><br>
+        <input type="text" id="b4" onclick="myfunc_4(); myfunc();" readonly>
+        <input type="text" id="b5" onclick="myfunc_5(); myfunc();" readonly>
+        <input type="text" id="b6" onclick="myfunc_6(); myfunc();" readonly>
+        <br><br>
+        <input type="text" id="b7" onclick="myfunc_7(); myfunc();" readonly>
+        <input type="text" id="b8" onclick="myfunc_8();myfunc();" readonly>
+        <input type="text" id="b9" onclick="myfunc_9();myfunc();" readonly>
+        <button id="reset" onclick="myfunc_10()">RESET</button>
+        <p id="print"></p>
+    </div>
+</body>
+   
+</html>
